@@ -1,0 +1,278 @@
+css
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #adb1c1, #1134b4, #d7c9d6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #171515, #c9a4b2);
+            -webkit-text-fill-color:lavender ;
+            text-shadow: 0 2px 4px rgba(66, 56, 56, 0.2);
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+        
+        .password-display {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        #password-output {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 500;
+            outline: none;
+            letter-spacing: 1px;
+            padding-right: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        #copy-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        #copy-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .options-container {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .option-group {
+            margin-bottom: 20px;
+        }
+        
+        .option-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        #length-slider {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        #length-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #ba6b11;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        #length-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 138, 0, 0.7);
+        }
+        
+        #length-value {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 5px 12px;
+            min-width: 50px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .checkbox-option input {
+            width: 20px;
+            height: 20px;
+            accent-color: #ff8a00;
+            cursor: pointer;
+        }
+        
+        .checkbox-option label {
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .checkbox-option label:hover {
+            color: #ff8a00;
+        }
+        
+        .strength-meter {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .strength-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .strength-title {
+            font-weight: 500;
+        }
+        
+        .strength-value {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .meter-bar {
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 6px;
+            transition: all 0.5s ease;
+        }
+        
+        #generate-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(229, 46, 113, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        #generate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(229, 46, 113, 0.5);
+        }
+        
+        #generate-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .fa-lock, .fa-copy, .fa-bolt {
+            font-size: 1.2rem;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateX(200%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            #password-output {
+                font-size: 1.2rem;
+            }
+            
+            .option-label, .checkbox-option label {
+                font-size: 1rem;
+            }
+        }

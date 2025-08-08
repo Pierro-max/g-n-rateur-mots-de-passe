@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mots de Passe Sécurisés</title>
+    <link rel="stylesheet" href="style.css">
+    <SCript src="script.js"></SCript>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-lock"></i> Générateur de Mots de Passe</h1>
+            <p class="subtitle">Créez des mots de passe sécurisés en un clic</p>
+        </header>
+        
+        <div class="password-display">
+            <input type="text" id="password-output" readonly placeholder="Votre mot de passe">
+            <button id="copy-btn"><i class="fas fa-copy"></i> Copier</button>
+        </div>
+        
+        <div class="options-container">
+            <div class="option-group">
+                <div class="option-label">
+                    <span>Longueur du mot de passe</span>
+                    <span id="length-value">12</span>
+                </div>
+                <div class="slider-container">
+                    <input type="range" id="length-slider" min="4" max="30" value="12">
+                </div>
+            </div>
+            
+            <div class="option-group">
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Majuscules (A-Z)</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Minuscules (a-z)</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Chiffres (0-9)</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">Symboles (!@#$%^&*)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="strength-meter">
+            <div class="strength-header">
+                <span class="strength-title">Force du mot de passe</span>
+                <span class="strength-value" id="strength-text">Moyen</span>
+            </div>
+            <div class="meter-bar">
+                <div class="meter-fill" id="meter-fill"></div>
+            </div>
+        </div>
+        
+        <button id="generate-btn"><i class="fas fa-bolt"></i> Générer un mot de passe</button>
+    </div>
+    
+    <div class="notification" id="notification">Mot de passe copié avec succès !</div>
+</body>
+</html>
